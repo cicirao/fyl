@@ -55,7 +55,7 @@ header a {
   padding-bottom: 2em;
   width: 75.2%;
   float: left; 
-  min-width: 18em;
+  min-width: 19em;
 }
 .title {
   height: 5em;
@@ -88,7 +88,7 @@ h3 {
 aside {
   float: left;
   width: 20%;
-  min-width: 12em;
+  min-width: 13em;
 }
 aside h3 {
   color: #fcfcfc;
