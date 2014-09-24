@@ -1,57 +1,101 @@
 html {
   font-size: 16px;
-  line-height: 24px;
-  font-family: "FF Tisa Pro", "Tisa Pro", Helvetica;
+  line-height: 160%;
+  font-family: Helvetica;
+  background-color: #f5f5f5;
 }
 
 body {
-  background: url("utilities/tiny_grid.png");
-  height: inherit;
+  color: #333;
+  text-decoration: none;
   width: 100%;
 }
 
 #page {
-  padding: 2em 4%;
-  text-align: center;
-}
-
-#page h1 {
-  font-size: 2.4em;
-  color: #E74C3C;
-  line-height: 1em;
-}
-
-#content {
-  width: 100%;
-  padding: 3em 0;
-  text-align: center;
-}
-#content p {
-  font-size: 1.2em;
-  line-height: 1.5em;
-  color: #2C3E50;
-  font-family: "FF Tisa Sans Pro", "Tisa Sans Pro", Helvetica;
-  position: relative;
   text-align: left;
-  padding-bottom: 1.2em;
 }
 
-#content a {
-  color: inherit;
-  font-style: italic;
+/*  header  */
+header {
+  width: 100%;
+  height: 3em;
 }
-
-#content strong {
-  font-weight: bold;
+nav {
+  height: 100%;
+  padding: 0 6%;
+  background-color: #1b1b1b;
+  color: #333;
 }
-
-#profile {
-  width: 38%; 
+nav h1 {
+  padding: 0.6em 2em 0;
   float: left;
-  position: relative;
-  padding: 0 1em;
+  font-size: 1.5em;
+}
+.nav {
+  font-size: 0.8em;
+  color: #FFCC9F;
+  float: left;
+  padding-top: 1.325em;
+}
+header a {
+  color: #f5f5f5;
+  text-decoration: none;
 }
 
-#profile img {
-  width: 90%;
+/*  main  */
+
+#main {
+  padding: 1em 0;
+  display: inline-block;
+}
+.us-congress {
+  padding-bottom: 2em;
+  margin: 0 9%;
+  width: 61.8%;
+}
+.title {
+  height: 5em;
+}
+.title h2 {
+  font-size: 2.5em;
+  line-height: 160%;
+}
+h3 {
+  font-size: 1.5em;
+  color: steelblue;
+}
+.tweets-stream ul {
+  padding: 1em 0;
+  list-style: disc;
+}
+.tweets-stream li {
+  line-height: 1.5em;
+  font-size: 0.9em;
+  text-align: left;
+  padding-bottom: 0.6em;
+}
+
+.key-links {
+  margin: 0 9%;
+}
+/*  public  */
+.public, .research{
+  background-color: lightblue;
+  text-align: left;
+  padding: 1em;
+  float: left;
+  width: 38%;
+}
+.public a, .research a {
+  text-decoration: none;
+  color: #666;
+}
+.public ul, .research ul {
+  padding-top: 1em;
+}
+
+/*  Research  */
+div .research {
+  float: left;
+  margin-left: 0.4em;
 }
