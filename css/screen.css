@@ -58,7 +58,7 @@ header a:hover {
   display: inline-block;
   max-width: 60em;
 }
-.us-congress {
+.content {
   padding-bottom: 2em;
   float: left; 
   min-width: 16em;
@@ -163,7 +163,7 @@ footer a {
 }
 
 @media screen and (min-width: 60em) {
-  .us-congress {
+  .content {
     width: 75.2%;
   }
   aside {
