@@ -130,17 +130,18 @@ div .research {
 
 /* --------------------- Footer ----------------------- */
 footer {
-  margin: 0 9%;
-  float: right;
+  width: 76%;
+  margin: 0 auto;
   padding: 1em 0;
 }
-.footer li {
-  /*float: right;*/
+footer li {
+  float: right;
   display: inline;
   padding-right: 1em;
 }
-.footer a {
+footer a {
   color: #888;
+  display: block;
 }
 
 /* --------------------- Media Query ----------------------- */
@@ -155,7 +156,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 60em) and (min-width: 40em) {
+@media screen and (min-width: 40em) {
   .us-congress {
     width: 100%;
   }
