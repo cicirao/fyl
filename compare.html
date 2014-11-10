@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Compare Members of Congress</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="congress, representative">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" media="screen" href="css/screen.css">
+
+</head>
+<body>
+  <div id="page">
+    <header id="fix">
+    	<nav>
+    	  <h1><a href="index.html">Follow Your Leaders</a></h1>
+    	</nav>
+    </header>
+    <div class="compare" id="main">
+      <h2>Compare Members of Congress</h2>
+      <ul class="profile">
+        <li>
+          <figure>
+            <img src="css/utilities/JM.jpg" alt="profile of John McCain">
+            <figcaption>John McCain</figcaption>
+          </figure>
+          <table>
+            <tbody>
+              <tr>
+                <th>Twitter</th>
+                <td><a href="https://twitter.com/SenJohnMcCain">@SenJohnMcCain</a></td>
+              </tr>
+              <tr>
+                <th>Chamber</th>
+                <td>Senate</td>
+              </tr>
+              <tr>
+                <th>Party</th>
+                <td>Republican</td>
+              </tr>
+              <tr>
+                <th>State</th>
+                <td>Arizona</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+        <li>
+          <figure>
+            <img src="css/utilities/JB.jpeg" alt="profile of John Boehner">
+            <figcaption>John Boehner</figcaption>
+          </figure>
+          <table>
+            <tbody>
+              <tr>
+                <th>Twitter</th>
+                <td><a href="https://twitter.com/johnboehner">@johnboehner</a></td>
+              </tr>
+              <tr>
+                <th>Chamber</th>
+                <td>House</td>
+              </tr>
+              <tr>
+                <th>Party</th>
+                <td>Republican</td>
+              </tr>
+              <tr>
+                <th>State</th>
+                <td>Ohio</td>
+              </tr>
+            </tbody>
+          </table>
+        </li>
+      </ul>
+      <div id="chart_div"></div>
+      <div class="cloud">
+        <div class="date">
+          <label for="from">From</label>
+          <input type="text" id="from" name="from">
+          <label for="to">To</label>
+          <input type="text" id="to" name="to">
+        </div>
+
+        <div id="cloud1">
+          <script src="http://cdn.tagul.com/embed/mxn6omsx4jx4"></script>
+          <!-- Please don't remove attribution to Tagul.com -->
+          <div style="display: table; margin: 0 auto;">
+            <a href="http://tagul.com/">Created with Tagul.com</a>
+          </div>
+        </div>
+        <div id="cloud2">
+          <script src="http://cdn.tagul.com/embed/mxn6omsx4jx4"></script>
+          <!-- Please don't remove attribution to Tagul.com -->
+          <div style="display: table; margin: 0 auto;">
+            <a href="http://tagul.com/">Created with Tagul.com</a>
+          </div>
+        </div>
+      </div>
+    </div>    
+  	<footer>
+      <ul>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+  	</footer>
+  </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+
+<script>
+$(function() {
+  $( "#from" ).datepicker({
+    defaultDate: "+1w",
+    changeMonth: true,
+    numberOfMonths: 3,
+    onClose: function( selectedDate ) {
+      $( "#to" ).datepicker( "option", "minDate", selectedDate );
+    }
+  });
+  $( "#to" ).datepicker({
+    defaultDate: "+1w",
+    changeMonth: true,
+    numberOfMonths: 3,
+    onClose: function( selectedDate ) {
+      $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+    }
+  });
+});
+</script>
+<script type="text/javascript">
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawChart);
+function drawChart() {
+
+var data = google.visualization.arrayToDataTable([
+['Month', 'John M.', 'John B.'],
+['Jan',  1000,      400],
+['Feb',  1170,      460],
+['Mar',  660,       1120],
+['Apr',  1030,      540],
+['May',  660,       1120],
+['June',  310,       120],
+['July',  760,       1120],
+['Aug',  260,       370],
+['Sep',  650,       580],
+['Oct',  260,       450],
+['Nov',  960,       730],
+['Dec',  1260,       1230],
+]);
+
+var options = {
+title: 'Monthly Tweets',
+hAxis: {title: 'Month', titleTextStyle: {color: 'blue'}},
+backgroundColor: { fill: 'none' }
+};
+
+var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+chart.draw(data, options);
+}
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+<script>
+  WebFont.load({
+    google: {
+      families: ['Open Sans', 'Oswald:300']
+    }
+  });
+</script>
+</body>
+</html>
