@@ -7,7 +7,7 @@
   <meta name="keywords" content="congress, representative">
   <link rel="stylesheet" type="text/css" href="css/reset.css">
   <link rel="stylesheet" media="screen" href="css/screen.css">
-
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" >
 </head>
 <body>
   <div id="page">
@@ -27,8 +27,8 @@
           <table>
             <tbody>
               <tr>
-                <th>Twitter</th>
-                <td><a href="https://twitter.com/SenJohnMcCain">@SenJohnMcCain</a></td>
+                <th><a href="https://twitter.com/SenJohnMcCain">@SenJohnMcCain</a></th>
+                <!-- <td><a href="https://twitter.com/SenJohnMcCain">@SenJohnMcCain</a></td> -->
               </tr>
               <tr>
                 <th>Chamber</th>
@@ -53,8 +53,8 @@
           <table>
             <tbody>
               <tr>
-                <th>Twitter</th>
-                <td><a href="https://twitter.com/johnboehner">@johnboehner</a></td>
+                <th><a href="https://twitter.com/johnboehner">@johnboehner</a></th>
+                <!-- <td><a href="https://twitter.com/johnboehner">@johnboehner</a></td> -->
               </tr>
               <tr>
                 <th>Chamber</th>
@@ -82,17 +82,18 @@
         </div>
 
         <div id="cloud1">
-          <script src="http://cdn.tagul.com/embed/mxn6omsx4jx4"></script>
+          <h4>Word Cloud of John McCain</h4>
+          <script src="http://cdn.tagul.com/embed/6sajqw6se35c"></script>
           <!-- Please don't remove attribution to Tagul.com -->
-          <div style="display: table; margin: 0 auto;">
-            <a href="http://tagul.com/">Created with Tagul.com</a>
+          <div style="display: table; margin: 0 auto;"><a href="http://tagul.com/">Created with Tagul.com</a></div>
           </div>
         </div>
+        
         <div id="cloud2">
-          <script src="http://cdn.tagul.com/embed/mxn6omsx4jx4"></script>
+          <h4>Word Cloud of John Boehner</h4>
+          <script src="http://cdn.tagul.com/embed/6sajqw6se35c"></script>
           <!-- Please don't remove attribution to Tagul.com -->
-          <div style="display: table; margin: 0 auto;">
-            <a href="http://tagul.com/">Created with Tagul.com</a>
+          <div style="display: table; margin: 0 auto;"><a href="http://tagul.com/">Created with Tagul.com</a></div>
           </div>
         </div>
       </div>
@@ -108,7 +109,6 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 
 <script>
@@ -154,7 +154,7 @@ var data = google.visualization.arrayToDataTable([
 
 var options = {
 title: 'Monthly Tweets',
-hAxis: {title: 'Month', titleTextStyle: {color: 'blue'}},
+hAxis: {title: 'Year 2013', titleTextStyle: {color: 'blue'}},
 backgroundColor: { fill: 'none' }
 };
 
