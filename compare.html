@@ -12,9 +12,24 @@
 <body>
   <div id="page">
     <header id="fix">
-    	<nav>
-    	  <h1><a href="index.html">Follow Your Leaders</a></h1>
-    	</nav>
+      <nav>
+        <h1><a href="index.html">Follow Your Leaders</a></h1>
+        <div id="menu-button">
+          <span>&nbsp;</span>
+          <span>&nbsp;</span>
+          <span>&nbsp;</span>
+        </div>
+        <ul id="menu"> 
+          <li><a href="compare.html">Compare Members</a></li>
+          <li><a href="#">Network Map</a></li>
+          <li><a href="#">Congress Map</a></li>
+          <li><a href="#">Find Your Representative</a></li>
+          <li><a href="#">Trends</a></li>
+          <li><a href="#">Networks</a></li>
+          <li><a href="#">Data Retrieved</a></li>
+          <li><a href="#">Request Information</a></li>
+        </ul>
+      </nav>
     </header>
     <div class="compare" id="main">
       <h2>Compare Members of Congress</h2>
@@ -88,7 +103,7 @@
           <div style="display: table; margin: 0 auto;"><a href="http://tagul.com/">Created with Tagul.com</a></div>
           </div>
         </div>
-        
+
         <div id="cloud2">
           <h4>Word Cloud of John Boehner</h4>
           <script src="http://cdn.tagul.com/embed/6sajqw6se35c"></script>
@@ -98,20 +113,20 @@
         </div>
       </div>
     </div>    
-  	<footer>
+    <footer>
       <ul>
         <li><a href="#">FAQ</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
-  	</footer>
+    </footer>
   </div>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-
 <script>
+// generate date selector with jquery-ui
 $(function() {
   $( "#from" ).datepicker({
     defaultDate: "+1w",
@@ -132,6 +147,7 @@ $(function() {
 });
 </script>
 <script type="text/javascript">
+// generate column chart with Google chart API
 google.load("visualization", "1", {packages:["corechart"]});
 google.setOnLoadCallback(drawChart);
 function drawChart() {
@@ -157,18 +173,38 @@ title: 'Monthly Tweets',
 hAxis: {title: 'Year 2013', titleTextStyle: {color: 'blue'}},
 backgroundColor: { fill: 'none' }
 };
-
+// don't know why I can't change the 'document.get' to '$'
 var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
 chart.draw(data, options);
 }
 </script>
+<script type="text/javascript">
+$('document').ready(function() {
+  // default none
+  // $('#menu').css('display', 'none');
+  $('#menu-button').click(function() {
+    // $('#menu').css('display', function() {
+    //   $('#menu').css('display') == 'none' ? 'block': 'none';
+    // });
+    // don't know above code does not work
+    var display = $('#menu').css('display');
+    if (display == 'none') {
+      $('#menu').css('display', 'block');
+    } else {
+      $('#menu').css('display', 'none');
+    };
+  });
+});
+</script>
+</script>
 <script src="http://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
 <script>
-  WebFont.load({
-    google: {
-      families: ['Open Sans', 'Oswald:300']
-    }
-  });
+// use google font API
+WebFont.load({
+  google: {
+    families: ['Open Sans', 'Oswald:300']
+  }
+});
 </script>
 </body>
 </html>

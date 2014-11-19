@@ -15,6 +15,21 @@
     <header id="fix">
     	<nav>
     	  <h1><a href="index.html">Follow Your Leaders</a></h1>
+        <div id="menu-button">
+          <span>&nbsp;</span>
+          <span>&nbsp;</span>
+          <span>&nbsp;</span>
+        </div>
+        <ul id="menu"> 
+          <li><a href="compare.html">Compare Members</a></li>
+          <li><a href="#">Network Map</a></li>
+          <li><a href="#">Congress Map</a></li>
+          <li><a href="#">Find Your Representative</a></li>
+          <li><a href="#">Trends</a></li>
+          <li><a href="#">Networks</a></li>
+          <li><a href="#">Data Retrieved</a></li>
+          <li><a href="#">Request Information</a></li>
+        </ul>
     	</nav>
     </header>
   	<div id="main">
@@ -64,11 +79,22 @@
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript">
-  function test() {
-    eval(tweets);
-  }
-  test();
-  try{eval(tweets);}catch(e){}
+$('document').ready(function() {
+  // default none
+  // $('#menu').css('display', 'none');
+  $('#menu-button').click(function() {
+    // $('#menu').css('display', function() {
+    //   $('#menu').css('display') == 'none' ? 'block': 'none';
+    // });
+    // don't know above code does not work
+    var display = $('#menu').css('display');
+    if (display == 'none') {
+      $('#menu').css('display', 'block');
+    } else {
+      $('#menu').css('display', 'none');
+    };
+  });
+});
 </script>
 <script src="http://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
 <script>
