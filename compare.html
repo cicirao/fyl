@@ -193,6 +193,8 @@ $('document').ready(function() {
       $('#menu').css('display', 'none');
     };
   });
+  // Redraw the chart on any change to the window size
+  window.onresize = drawChart;
 });
 </script>
 <script src="http://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
